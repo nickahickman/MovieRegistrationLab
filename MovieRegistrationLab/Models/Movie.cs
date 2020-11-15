@@ -70,23 +70,5 @@ namespace MovieRegistrationLab.Models
                 return movieList;
             }
         }
-
-        public void PopulateMovieDB() 
-        {
-            List<Movie> movies = new List<Movie>
-            {
-                new Movie("Star Wars: Episode V - The Empire Strikes Back", "Action", 1980, "Mark Hamill, Harrison Ford, Carrie Fisher", "Irvin Kershner"),
-                new Movie("The Matrix", "Action", 1999, "Keanu Reeves, Laurence Fishburne", "Lana Wachowski, Lilly Wachowski"),
-                new Movie("Alien", "Horror", 1979, "Sigourney Weaver, John Hunt, Harry Dean Stanton", "Ridley Scott, James Cameron"),
-                new Movie("Independence Day", "Action", 1996, "Will Smith, Jeff Goldblum, Bill Pullman", "Roland Emmerich"),
-                new Movie("The Evil Dead", "Horror", 1981, "Bruce Campbell, Ted Raimi, Ellen Sandweiss", "Sam Raimi"),
-                new Movie("Halloween", "Horror", 1978, "Jamie Lee Curtis, Donald Pleasence, Nick Castle", "John Carpenter"),
-            };
-
-            foreach (Movie movie in movies)
-            {
-                AddToDB(movie);
-            }
-        }
     }
 }
