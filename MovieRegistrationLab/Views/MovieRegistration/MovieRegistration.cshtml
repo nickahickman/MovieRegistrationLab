@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Movie Registration";
+}
+
+<h3>Register a new movie</h3>
+
+<form action="/MovieRegistration/MovieConfirmation" method="post" id="movieForm">
+    <input type="text" name="Title" value="" placeholder="Title" required/><br />
+    <select name="Genre" id="Genre" form="movieForm" required>
+        <option value="" disabled default>Genre</option>
+        <option value="Action">Action</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Drama">Drama</option>
+        <option value="Horror">Horror</option>
+    </select><br />
+    <input type="text" name="Actors" value="" placeholder="Actors" required/><br />
+    <input type="text" name="Directors" value="" placeholder="Directors" required/><br />
+    <input type="number" name="Year" min="1880" max="@int.Parse(DateTime.Now.Year.ToString())" value="" placeholder="Release Year" required/><br />
+    <input type="submit" value="Register Movie" />
+</form>

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "View Movies";
+}
+
+@{ 
+    Movie movieInstance = new Movie();
+    List<Movie> movies = movieInstance.GetMovieList();
+}
+<h1>Movie List</h1>
+<p>@movies.Count Movies in database</p>
+<hr />
+
+@foreach (Movie movie in movies)
+{ 
+   <h3>@movie.Title</h3> 
+   <ul>
+       <li>@movie.Genre</li>
+       <li>@movie.Year</li>
+       <li>@movie.Actors</li>
+       <li>@movie.Directors</li>
+   </ul>
+}
