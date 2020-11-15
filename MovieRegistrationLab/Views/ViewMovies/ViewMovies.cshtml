@@ -13,11 +13,11 @@
 
 @foreach (Movie movie in movies)
 { 
-   <h3>@movie.Title</h3> 
+   <h4>@movie.Title</h4> 
    <ul>
-       <li>@movie.Genre</li>
-       <li>@movie.Year</li>
-       <li>@movie.Actors</li>
-       <li>@movie.Directors</li>
+       <li>Genre: @movie.Genre</li>
+       <li>Year: @movie.Year</li>
+       <li>Actors: @movie.Actors</li>
+       <li>Directors: @movie.Directors</li>
    </ul>
 }
