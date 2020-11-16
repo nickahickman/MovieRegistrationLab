@@ -9,7 +9,6 @@ namespace MovieRegistrationLab.Models
 {
     public class Movie
     {
-        [StringLength(50, ErrorMessage = "Maximum of 50 characters allowed!")]
         public string Title { get; set; }
 
         public string Genre { get; set; }
@@ -48,7 +47,6 @@ namespace MovieRegistrationLab.Models
                     Directors = newMovie.Directors
                 };
 
-                // Insert new customer document (Id will be auto-incremented)
                 col.Insert(movie);
             }
         }
@@ -62,7 +60,7 @@ namespace MovieRegistrationLab.Models
                 var col = db.GetCollection<Movie>("movies");
 
                 // Get every row in MovieDB and add it to a list to be returned
-                foreach (var movie in col.FindAll())
+                foreach (var movie in col.Find(Query.All("Year"), Query.Ascending))
                 {
                     movieList.Add(movie);
                 }

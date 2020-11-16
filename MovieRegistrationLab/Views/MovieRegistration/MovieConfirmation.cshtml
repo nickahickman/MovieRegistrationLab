@@ -4,14 +4,13 @@
 }
 
 @model Movie
-<h1>Movie Registered!</h1>
+<h1 class="alert-success">@Model.Title Registered!</h1>
 
 <p>
-    Title: @Model.Title <br />
     Genre: @Model.Genre <br />
     Year: @Model.Year <br />
     Actors: @Model.Actors <br />
     Directors: @Model.Directors
 </p>
 
-<h2 class="alert-success">Registration Successful! Thank You.</h2>
+<h2>Thank You.</h2>
